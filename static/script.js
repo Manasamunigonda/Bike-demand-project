@@ -188,13 +188,12 @@ document.addEventListener("DOMContentLoaded", () => {
       const details = document.getElementById("capacityDetails");
       const note = document.getElementById("capacityNote");
 
-      if (difference > 0) {
-        action.textContent = `Add or move ${difference} bicycles`;
+          if (difference > 0) {
+        action.textContent = `Add ${difference} bicycles`;
       } else if (difference < 0) {
-        action.textContent =
-          `${Math.abs(difference)} bicycles are above the target`;
+        action.textContent = `Remove ${Math.abs(difference)} bicycles`;
       } else {
-        action.textContent = "Available capacity meets the target";
+        action.textContent = "No change needed";
       }
 
       details.textContent =
